@@ -1,0 +1,35 @@
+{
+  "name": "babel-preset-firenet",
+  "version": "7.0.2",
+  "description": "Babel preset for FireNet Designs",
+  "author": "FireNet Designs",
+  "homepage": "https://firenetdesigns.ca/",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "preversion": "npm run build",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/FireNet-Designs/babel-preset-firenet",
+  "main": "lib/index.js",
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/plugin-proposal-private-methods": "^7.8.3",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.1.6",
+    "conventional-changelog-cli": "^2.0.31"
+  }
+}

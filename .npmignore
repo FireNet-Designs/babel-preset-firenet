@@ -1,0 +1,7 @@
+src
+test
+*.log
+babel.config.js
+.idea/
+.nvmrc
+.vscode/
